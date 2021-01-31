@@ -27,10 +27,14 @@ void akcjaGracza()
                 std::cin.ignore(256, '\n');
                 std::cin >> action;
             }
-    if(m->kwadratBazowy[action-1] != 'x' && m->kwadratBazowy[action-1] != 'o')
+            if(action < 1 || action>9)
+  {
+  throw std::string("blad");
+  }
+    if(m->kwadratBazowy[action-1] != 'x' && m->kwadratBazowy[action-1] != 'o' && action >=1 && action <=9)
             poprawny =1;
     else
-    {std::cout << "To pole jest juz zajete. Prosze podac wolna pozycje\n";} 
+    {std::cout << "Prosze podac wolna pozycje\n";} 
     }
     catch(const std::string wyj)
     {std::cout << "Nieprawidłowe dane. Wybierz numer niezajetego pola\n";}
@@ -50,15 +54,19 @@ void akcjaGracza2()
     std::cin >> action;
     while(std::cin.fail())
             {
-                std::cout << "Prosze podac wolna pozycje\n";
+                std::cout << "Prosze podac wolna pozycje" << std::endl;
                 std::cin.clear();
                 std::cin.ignore(256, '\n');
                 std::cin >> action;
             }
-    if(m->kwadratBazowy[action-1] != 'x' && m->kwadratBazowy[action-1] != 'o')
+            if(action < 1 || action>9)
+  {
+  throw std::string("blad");
+  }
+    if(m->kwadratBazowy[action-1] != 'x' && m->kwadratBazowy[action-1] != 'o' && action >=1 && action <=9)
             poprawny =1;
     else
-    {std::cout << "To pole jest juz zajete. Prosze podac wolna pozycje\n";} 
+    {std::cout << "Prosze podac wolna pozycje\n";} 
     }
     catch(const std::string wyj)
     {std::cout << "Nieprawidłowe dane. Wybierz numer niezajetego pola\n";}
