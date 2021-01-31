@@ -1,13 +1,15 @@
 #include <iostream>
+#include "mecz.hpp"
 
-char kwadratBazowy[9] = {'1','2','3','4','5','6','7','8','9'};
-//char
 
 int czyWygrana()
 {
 return 0;
 }
-void plansza()
+
+int main()
 {
-  std::cout << " "<<kwadratBazowy[0]<<" | 2 | 3 \n---|---|---\n 4 | 5 | 6 \n---|---|---\n 7 | 8 | 9 \n";
+  mecz m;
+  m.set(5, 'x');
+  m.plansza();
 }
