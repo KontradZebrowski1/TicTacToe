@@ -84,7 +84,7 @@ void check()
   }
 }
 
-char* obrotPrawo()
+/*char* obrotPrawo()
 {
   char obrocony[9] = {kwadratBazowy[6],kwadratBazowy[3],kwadratBazowy[0],kwadratBazowy[7],kwadratBazowy[4],kwadratBazowy[1],kwadratBazowy[8],kwadratBazowy[5],kwadratBazowy[2]};
   return obrocony;
@@ -124,6 +124,14 @@ char* symYX()
 {
   char symetX[9] = {kwadratBazowy[8],kwadratBazowy[5],kwadratBazowy[2],kwadratBazowy[7],kwadratBazowy[4],kwadratBazowy[1],kwadratBazowy[6],kwadratBazowy[3],kwadratBazowy[0]};
   return symetX;
+}*/
+
+int checkRemis()
+{
+  if (kwadratBazowy[0] != '1' && kwadratBazowy[1] != '2' &&kwadratBazowy[2] != '3' && kwadratBazowy[3] != '4' && kwadratBazowy[4] != '5' && kwadratBazowy[5] != '6' && kwadratBazowy[6] != '7' && kwadratBazowy[7] != '8' && kwadratBazowy[8] != '9')
+  return -1;
+  else
+  return 0;
 }
 
 char kwadratBazowy[9] = {'1','2','3','4','5','6','7','8','9'};
