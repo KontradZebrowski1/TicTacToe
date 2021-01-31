@@ -1,5 +1,5 @@
 #include <iostream>
-#include "mecz.hpp"
+#include "game.hpp"
 
 
 int czyWygrana()
@@ -9,7 +9,14 @@ return 0;
 
 int main()
 {
-  mecz m;
+  /*mecz m;
   m.set(5, 'x');
-  m.plansza();
+  m.plansza();*/
+
+  game Gra;
+  while(Gra.getStan())
+  {Gra.akcjaGracza();
+  Gra.akcjaGracza2();}
+
+ 
 }
