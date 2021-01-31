@@ -44,6 +44,11 @@ void akcjaGracza()
     m->plansza();
     m->check();
     wygrana();
+    if(m->checkRemis() == -1 && m->getWynikMeczu() == 0)
+    {
+      stan = 0;
+      std::cout<<"Remis\n";
+    }
   }
 void akcjaGracza2()
   { std::cout << "Ruch 'o':\n";
@@ -76,6 +81,11 @@ void akcjaGracza2()
     m->plansza();
     m->check();
     wygrana();
+    if(m->checkRemis() == -1 && m->getWynikMeczu() == 0)
+    {
+      stan = 0;
+      std::cout<<"Remis\n";
+    }
   }
 
 void wygrana()
@@ -89,12 +99,26 @@ void wygrana()
 void akcjaKomputera()
 {
     int action = a->ruch(*m);
-    action = action+1;
+std::cout << "komputer stawia " << action +1 << std::endl;
+    if(action != -1)
+    {action = action+1;
 
     m->set(action, 'o');
     m->plansza();
     m->check();
     wygrana();
+    if(m->checkRemis() == -1 && m->getWynikMeczu() == 0)
+    {
+      stan = 0;
+      std::cout<<"Remis\n";
+    }
+    }
+    else
+    {
+      stan = 0;
+      std::cout<<"Remis\n";
+    }
+    
 }
 
 
