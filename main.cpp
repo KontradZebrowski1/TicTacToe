@@ -16,6 +16,7 @@ int main()
   game Gra;
   while(Gra.getStan())
   {Gra.akcjaGracza();
+  if(Gra.getStan() == 1)
   Gra.akcjaGracza2();}
 
  
