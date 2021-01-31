@@ -1,5 +1,6 @@
 #include <memory>
-#include "mecz.hpp"
+//#include "mecz.hpp"
+#include "ai.hpp"
 
 class game
 {
@@ -85,8 +86,21 @@ void wygrana()
   { wynik=wynik-1; std::cout << "Przegrales!\nWynik: "<< wynik<<"\n";stan = 0;}
 }
 
+void akcjaKomputera()
+{
+    int action = a->ruch(*m);
+    action = action+1;
+
+    m->set(action, 'o');
+    m->plansza();
+    m->check();
+    wygrana();
+}
+
+
 private:
 bool stan = 1;
 int wynik = 0;
 mecz *m;
+ai *a;
 };

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "game.hpp"
+#include <string.h>
 
 
 int czyWygrana()
@@ -17,7 +18,13 @@ int main()
   while(Gra.getStan())
   {Gra.akcjaGracza();
   if(Gra.getStan() == 1)
-  Gra.akcjaGracza2();}
+  Gra.akcjaKomputera();}
 
- 
+ /*char jeden[2] = {'1','1'};
+ std::string dwa= {'1','1'};
+
+ if (strcmp(jeden, dwa) != 0)
+ std::cout<<"tak";
+ else
+ std::cout<<"nie";*/
 }
